@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import React, {useState, useContext} from 'react'
+
+const fruitContext = React.createContext("Apple")
+const App = ()=> {
+  const [fruit, setFruit] = useState('apple')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <fruitContext.Provider value={[fruit, setFruit]}>
+      <div className="App">
+        <h3>{fruit}</h3>
+      </div>
+    </fruitContext.Provider>
+  )
 }
 
 export default App;
