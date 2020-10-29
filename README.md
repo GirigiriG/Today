@@ -6,5 +6,5 @@ rabbitMQ to decouple the backend infrastructure.
 
 
 -- Wireframe
-!![Group 46](https://user-images.githubusercontent.com/14972474/97515902-66fbc000-1968-11eb-8139-0072f3d6b13a.jpg)
+![image](https://user-images.githubusercontent.com/14972474/97516439-7b8c8800-1969-11eb-8b8a-9b8cbfb210ff.png)
 
