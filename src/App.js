@@ -1,17 +1,25 @@
 
+import React, { useContext } from 'react';
 import './App.css';
-import React, {useState, useContext} from 'react'
+import {StoreProvider, useStore } from './store'
 
-const fruitContext = React.createContext("Apple")
+
 const App = ()=> {
-  const [fruit, setFruit] = useState('apple')
+  
+  
   return (
-    <fruitContext.Provider value={[fruit, setFruit]}>
+    <StoreProvider>
       <div className="App">
-        <h3>{fruit}</h3>
+       <Home />
       </div>
-    </fruitContext.Provider>
+    </StoreProvider>
   )
+}
+
+function Home () {
+  const {state, dispatch} = useStore();
+  return <div>{state.message}</div> 
+  
 }
 
 export default App;
