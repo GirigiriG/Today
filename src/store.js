@@ -1,17 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, {createContext, useContext, useReducer} from 'react'
-import reducer from './reducer'
-const initialState = {count: 0, message: "HELLO WORLD"};
+import reducer from './reducer/projectreducer'
 
-export const StoreContext = createContext();
+const initialState = {project: [], task: []};
 
-export const StoreProvider = ({children}) => {
+export const ProjectContext = createContext();
+
+export const ProjectProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState);
-   
+    
     return (
-        <StoreContext.Provider value={{state, dispatch}}>
+        <ProjectContext.Provider value={{state, dispatch}}>
             {children}
-        </StoreContext.Provider>
+        </ProjectContext.Provider>
     )
 }
-export const useStore = () => useContext(StoreContext)
+
+export const useStore = () => useContext(ProjectContext)

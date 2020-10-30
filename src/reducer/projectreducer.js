@@ -3,7 +3,7 @@ const reducer = (state, action) => {
         case 'CREATE_PROJECT':
             return {"New Project": "Project created"}
         default:
-            return {"error": "type not found"}
+            throw new Error('action not defined')
     }
 }
 

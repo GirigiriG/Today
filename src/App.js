@@ -1,25 +1,23 @@
-
-import React, { useContext } from 'react';
 import './App.css';
-import {StoreProvider, useStore } from './store'
-
+import {ProjectProvider, useStore } from './store'
 
 const App = ()=> {
-  
-  
   return (
-    <StoreProvider>
+    <ProjectProvider>
       <div className="App">
        <Home />
       </div>
-    </StoreProvider>
+    </ProjectProvider>
   )
 }
 
 function Home () {
   const {state, dispatch} = useStore();
-  return <div>{state.message}</div> 
-  
+  console.log(useStore());
+  return <div 
+    onClick={() => dispatch({type: "CREATE_PROJECT"})}>
+    {JSON.stringify(state)}
+  </div> 
 }
 
 export default App;
