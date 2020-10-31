@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, {createContext, useContext, useReducer} from 'react'
-import reducer from './reducer/reducer'
-
-const initialState = {project: [], task: []};
+import reducer, {initialState} from './reducer/reducer'
 
 export const ProjectContext = createContext();
 

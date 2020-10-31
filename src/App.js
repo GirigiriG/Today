@@ -1,4 +1,5 @@
 import './App.css';
+import projectService from './Service/ProjectService'
 import {ProjectProvider, useStore } from './store'
 
 const App = ()=> {
@@ -13,11 +14,24 @@ const App = ()=> {
 
 function Home () {
   const {state, dispatch} = useStore();
-  console.log(useStore());
-  return <div 
-    onClick={() => dispatch({type: "CREATE_PROJECT"})}>
-    {JSON.stringify(state)}
-  </div> 
+  return (
+    <div>
+      <button 
+        onClick={handleProjectCreation}>
+        Create project
+      </button>
+      <br/>
+      {state.project.map(record => <p>{record.name}</p>)}
+    </div>
+  ) 
+
+  function handleProjectCreation(){
+    let newProject = new projectService()
+    newProject.createProject({name: "Today task management project", description: "create new task"})
+    dispatch({type: "CREATE_PROJECT", payload: {name: "Today task management project", description: "create new task"}})
+  }
 }
+
+
 
 export default App;
