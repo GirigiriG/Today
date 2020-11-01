@@ -1,6 +1,7 @@
 import './App.css';
 import {ProjectProvider, useStore } from './store'
-import MainHeader from './components/mainHeader'
+import MainHeader from './components/mainHeader/mainHeader'
+import ContentWrapper from './components/mainContentWrapper/ContentWrapper'
 
 const App = ()=> {
   return (
@@ -17,6 +18,8 @@ function Home () {
   return (
     <div>
       <MainHeader></MainHeader>
+      <ContentWrapper></ContentWrapper>
+      
     </div>
   ) 
 

@@ -1,7 +1,9 @@
 .main-nav {
     width: 100%;
     height: 55px;
-    border-bottom: 1px solid #dfdfdf;
+    color: #033443;
+    border-bottom: 1px solid #d4d4d4;
+    box-shadow: 0 0 3 4 #e0dfdf;
 }
 
 .main-nav_content {
@@ -18,5 +20,5 @@
 }
 
 .logo h3 {
-    margin-left: 0.5rem;
+    margin-left: 0.2rem;
 }

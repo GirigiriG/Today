@@ -1,6 +1,6 @@
 import React from "react"
 import "./mainHeader.css"
-import {Logo} from '../asset/asset'
+import {Logo} from '../../asset/asset'
 
 const mainHeader = () => {
     console.log(Logo)
