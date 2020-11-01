@@ -1,6 +1,6 @@
 .listview {
     margin-bottom: 15px;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background-color: #fff;
     border: 1px solid #d4d4d4;
     color: rgba(0, 0, 0, 0.700);
@@ -9,7 +9,6 @@
 
 .listview header {
     padding: 25px 0;
-    margin-bottom: 25px;
     border-bottom: 1px solid #d4d4d4;
 }
 
@@ -19,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 25px 0;
 }
 
 .search-wrapper {
@@ -48,7 +49,7 @@
 }
 
 .listview-item-content {
-    height: 900px;
+    max-height: 900px;
     overflow-y: scroll;
 }
 
@@ -59,11 +60,18 @@
     font-weight: bold;
     text-align: left;
     flex-direction: row;
+    border-bottom: 1px solid #d4d4d4;
     justify-content: space-evenly;
 }
 
+.list-header span { margin-right: 0.5rem;}
+
 .list-header div {
     width: 14.25%;
+}
+
+.list-header div:nth-child(1) {
+    cursor: pointer;
 }
 
 .list-header div:not(:first-child) {

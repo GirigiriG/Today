@@ -6,7 +6,7 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: left;
-    border: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
     margin-bottom: 4px;
     cursor: pointer;
     transition: all 0.2s ease-out;
@@ -14,7 +14,7 @@
 }
 
 .listviewitem:hover {
-    border: 1px solid #19A2D3;
+    border-bottom: 1px solid #19A2D3;
     transition: all 0.2s ease-out;
 } 
 

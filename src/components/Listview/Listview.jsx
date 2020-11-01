@@ -1,6 +1,7 @@
 import  React from "react";
 import "./Listview.css"
 import SearchBar from "../SearchBar/SearchBar"
+import { SortAZ } from "../../asset/asset";
 import ListviewItem from "../ListviewItem/ListviewItem"
 const Listview = () => {
     const [searchState, setSearch] = React.useState("")
@@ -20,7 +21,10 @@ const Listview = () => {
                 <button>+</button>
             </div>
             <div className="list-header">
-                <div>Name</div>
+                <div>
+                    <span>Name</span>
+                    <SortAZ className="SortAZ"></SortAZ>
+                </div>
                 <div>Estimate</div>
                 <div>Remaining</div>
                 <div>Owner</div>
