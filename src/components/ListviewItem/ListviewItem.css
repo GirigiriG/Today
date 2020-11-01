@@ -10,7 +10,7 @@
     margin-bottom: 4px;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .listviewitem:hover {
@@ -19,7 +19,7 @@
 } 
 
 .listviewitem div {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.329);
 }
 
 .listviewitem div:not(:first-child) {
