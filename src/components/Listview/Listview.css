@@ -1,0 +1,75 @@
+.listview {
+    margin-bottom: 15px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    color: rgba(0, 0, 0, 0.700);
+    max-height: 1200px;
+}
+
+.listview header {
+    padding: 25px 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.search-newtask {
+    height: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-wrapper {
+    width: 20rem;
+    height: 22px;
+   display: flex;
+}
+
+.search-newtask button {
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #3ba30f;
+    border: 1px solid #3ba30f;
+    outline: none;
+    border-radius: 3px;
+    width: 40px;
+    transition: all 0.2s ease-out;
+}
+
+.search-newtask button:hover {
+    background-color: #57CC24;
+    border: 1px solid #57CC24;
+    transition: all 0.2s ease-in;
+}
+
+.listview-item-content {
+    height: 900px;
+    overflow-y: scroll;
+}
+
+.list-header {
+    display: flex;
+    padding: 10px 1%;
+    color: rgba(0, 0, 0, 0.70);
+    font-weight: bold;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.list-header div {
+    width: 14.25%;
+}
+
+.list-header div:not(:first-child) {
+    text-align: center;
+}
+
+.list-header div:first-child {
+    width : 35%; 
+}
