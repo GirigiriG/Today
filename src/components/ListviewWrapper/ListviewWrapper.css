@@ -1,6 +1,6 @@
 .listview-wrapper {
-    width: 74%;
+    width: 75%;
+    margin: 0.4rem;
     display: flex;
     flex-direction: column;
-    
 }

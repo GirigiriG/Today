@@ -1,10 +1,10 @@
 .listview {
-    margin-bottom: 15px;
     padding: 1.2rem;
+    max-height: 1120px;
+    margin-bottom: 15px;
     background-color: #fff;
     border: 1px solid #d4d4d4;
     color: rgba(0, 0, 0, 0.700);
-    max-height: 1200px;
 }
 
 .listview header {
@@ -14,7 +14,6 @@
 
 .search-newtask {
     height: 40px;
-    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,16 +28,16 @@
 }
 
 .search-newtask button {
+    width: 40px;
+    outline: none;
     padding: 0.5rem;
-    font-weight: bold;
-    color: #ffffff;
     cursor: pointer;
     font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 3px;
     background-color: #3ba30f;
     border: 1px solid #3ba30f;
-    outline: none;
-    border-radius: 3px;
-    width: 40px;
     transition: all 0.2s ease-out;
 }
 
@@ -49,13 +48,13 @@
 }
 
 .listview-item-content {
-    max-height: 900px;
+    height: 900px;
     overflow-y: scroll;
 }
 
 .list-header {
     display: flex;
-    padding: 10px 1%;
+    padding: 15px 1%;
     color: rgba(0, 0, 0, 0.70);
     font-weight: bold;
     text-align: left;
@@ -63,8 +62,6 @@
     border-bottom: 1px solid #d4d4d4;
     justify-content: space-evenly;
 }
-
-.list-header span { margin-right: 0.5rem;}
 
 .list-header div {
     width: 14.25%;

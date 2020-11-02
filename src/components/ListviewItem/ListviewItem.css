@@ -3,23 +3,29 @@
     padding: 2px 1%;
     height: 45px;
     display: flex;
+    font-size: 0.9rem;
     justify-content: space-evenly;
     align-items: center;
     text-align: left;
     border-bottom: 1px solid #dddddd;
-    margin-bottom: 4px;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    font-weight: 600;
+    font-weight: 400;
 }
+
 
 .listviewitem:hover {
     border-bottom: 1px solid #19A2D3;
-    transition: all 0.2s ease-out;
+    background-color: rgb(245, 245, 245);
+    transition: all 0.2s ease-in;
 } 
 
 .listviewitem div {
-    color: rgba(0, 0, 0, 0.329);
+    color: rgba(0, 0, 0, 0.60);
+}
+
+.listviewitem:hover {
+    color: rgba(0, 0, 0, 0.705);
 }
 
 .listviewitem div:not(:first-child) {
