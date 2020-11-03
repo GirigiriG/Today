@@ -1,18 +1,28 @@
 .sprint-progress {
     padding: 1rem;
-    color: rgba(0, 0, 0, 0.73);
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.sprint-progress header {
+    border-bottom: 1px solid #dddddd;
 }
 
 .sprint-progress h4 {
     padding: 0.3rem 0;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.1rem;
     border-bottom: 1px solid #dddddd;
 }
 
 .sprint-progress p {
-    font-size: .73rem;
-    margin: 0.1rem 0;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: .76rem;
+    margin: 0.3rem 0;
+    color: rgba(0, 0, 0, 0.61);
+}
+
+.sprint-progress-top, .sprint-progress-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .sprint-progress span {
@@ -35,5 +45,4 @@
     width: 30%;
     background: linear-gradient(-45deg,#00A81A, #00ca43, #70db05);
     height: 100%;
-
 }

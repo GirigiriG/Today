@@ -7,7 +7,7 @@ const ListviewItem = () => {
             <div>Create Application With React</div>
             <div></div>
             <div></div>
-            <div>Gideon G.</div>
+            {/* <div>Gideon G.</div> */}
             <div>In Progress</div>
         </div>
     )

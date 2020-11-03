@@ -13,7 +13,6 @@
     font-weight: 400;
 }
 
-
 .listviewitem:hover {
     border-bottom: 1px solid #19A2D3;
     background-color: rgb(245, 245, 245);
@@ -24,7 +23,7 @@
     color: rgba(0, 0, 0, 0.60);
 }
 
-.listviewitem:hover {
+.listviewitem div:hover {
     color: rgba(0, 0, 0, 0.705);
 }
 

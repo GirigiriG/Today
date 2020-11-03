@@ -3,57 +3,62 @@ import "./Listview.css"
 import SearchBar from "../SearchBar/SearchBar"
 import { SortAZ } from "../../asset/asset";
 import ListviewItem from "../ListviewItem/ListviewItem"
+import DetailPanel from "../DetailPanel/DetailPanel"
+
 const Listview = () => {
     const [searchState, setSearch] = React.useState("")
     return(
         <div className="listview">
-            <div>
+            <header>
+                <h3>My Current Tasks</h3>
+            </header>
+            <div className="search-newtask">
+                <div className="search-wrapper">
+                    <SearchBar
+                        handleChange={e => setSearch(e.target.value)}
+                        searchValue={searchState}
+                        placeholderText="Search task...">
+                    </SearchBar>
+                </div>
+                <button>+</button>
+            </div>
+            <div className="master-detail">
+                <div className="master">
+                    <div className="listview-item-content">
 
-                <header>
-                    <h2>My Current Tasks</h2>
-                </header>
-                <div className="search-newtask">
-                    <div className="search-wrapper">
-                        <SearchBar
-                            handleChange={e => setSearch(e.target.value)}
-                            searchValue={searchState}
-                            placeholderText="Search task...">
-                        </SearchBar>
+                    <div className="list-header">
+                        <div>
+                            <span>Name</span>
+                            <SortAZ className="SortAZ"></SortAZ>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>Status</div>
                     </div>
-                    <button>+</button>
-                </div>
-                <div className="list-header">
-                    <div>
-                        <span>Name</span>
-                        <SortAZ className="SortAZ"></SortAZ>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
+                        <ListviewItem></ListviewItem>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div>Owner</div>
-                    <div>Status</div>
                 </div>
-                <div className="listview-item-content">
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                    <ListviewItem></ListviewItem>
-                </div>
+                <DetailPanel></DetailPanel>
             </div>
         </div>
     )
