@@ -28,7 +28,7 @@ const Listview = () => {
                 <button>+</button>
             </div>
             <div className="master-detail">
-                <div className="master">
+                <div className="master" style={detailVisability.cssProperties}>
                     <div className="listview-item-content">
 
                     <div className="list-header">

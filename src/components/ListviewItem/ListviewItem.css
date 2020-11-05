@@ -4,7 +4,7 @@
     height: 45px;
     display: flex;
     font-size: 0.9rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     text-align: left;
     border-bottom: 1px solid #dddddd;
