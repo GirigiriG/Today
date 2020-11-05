@@ -8,7 +8,7 @@ const ListviewItem = ({dispatchToggleState, detailState}) => {
         // detailState.cssProperties[""] = "55%" 
         let updatedState = {
             detailIsvisible: true,
-            cssProperties: {"--detail-width": "55%", "--master-width": "45%"}
+            cssProperties: {"--detail-width": "60%", "--master-width": "40%"}
         }
         dispatchToggleState(updatedState)
     }
