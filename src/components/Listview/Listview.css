@@ -47,7 +47,8 @@
 }
 
 .master {
-    width: 45%;
+    --master-width: 100;
+    width: var();
     overflow-y: scroll;
     height: 900px;
 }

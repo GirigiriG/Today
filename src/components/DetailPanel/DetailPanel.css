@@ -1,5 +1,6 @@
 .detail-panel {
-    width: 55%;
+    --detail-width: 0;
+    width: var(--detail-width);
     max-height: 100%;
-    border-left: 1px solid #00bbff;
+    border-left: 1px solid #dddddd;
 }

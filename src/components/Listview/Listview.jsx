@@ -6,7 +6,12 @@ import ListviewItem from "../ListviewItem/ListviewItem"
 import DetailPanel from "../DetailPanel/DetailPanel"
 
 const Listview = () => {
+    const  [detailVisability, setDetailVisability] = React.useState({
+        detailIsvisible : false,
+        cssProperties: {}
+    });
     const [searchState, setSearch] = React.useState("")
+
     return(
         <div className="listview">
             <header>
@@ -36,32 +41,23 @@ const Listview = () => {
                         <div></div>
                         <div>Status</div>
                     </div>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
-                        <ListviewItem></ListviewItem>
+                        <ListviewItem 
+                            dispatchToggleState={setDetailVisability}
+                            detailState={detailVisability}>
+                        </ListviewItem>
                     </div>
                 </div>
-                <DetailPanel></DetailPanel>
+                {detailPanel(detailVisability)}
             </div>
         </div>
     )
+}
+
+const detailPanel = (detailVisability) => {
+    
+    if(detailVisability.detailIsvisible) 
+        return <DetailPanel cssprop={detailVisability.cssProperties}></DetailPanel>;
+    return <div></div>;
 }
 
 export default Listview;

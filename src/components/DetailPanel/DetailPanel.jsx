@@ -1,9 +1,10 @@
 import React from "react";
 import "./DetailPanel.css"
 
-const DetailPanel = () => {
+const DetailPanel = ({cssprop}) => {
+    console.log(cssprop)
     return (
-        <div className="detail-panel">
+        <div className="detail-panel" style={cssprop}>
 
         </div>
     )
