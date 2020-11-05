@@ -51,6 +51,7 @@
     width: var(--master-width);
     overflow-y: scroll;
     height: 900px;
+    transition: width 0.2s ease-in;
 }
 
 .search-newtask button:hover {

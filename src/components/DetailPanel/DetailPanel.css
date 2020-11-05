@@ -3,4 +3,5 @@
     width: var(--detail-width);
     max-height: 100%;
     border-left: 1px solid #dddddd;
+    transition: width 0.2s ease-out;
 }
