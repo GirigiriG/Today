@@ -12,6 +12,17 @@ const Listview = () => {
     });
     const [searchState, setSearch] = React.useState("")
 
+    const detailPanel = () => {
+        if(detailVisability.detailIsvisible) 
+            return (
+            <DetailPanel
+                dispatchCSSState={setDetailVisability} 
+                cssprop={detailVisability.cssProperties}>
+            </DetailPanel>
+        )
+        return <div></div>;
+    }
+
     return(
         <div className="listview">
             <header>
@@ -51,13 +62,6 @@ const Listview = () => {
             </div>
         </div>
     )
-}
-
-const detailPanel = (detailVisability) => {
-    
-    if(detailVisability.detailIsvisible) 
-        return <DetailPanel cssprop={detailVisability.cssProperties}></DetailPanel>;
-    return <div></div>;
 }
 
 export default Listview;

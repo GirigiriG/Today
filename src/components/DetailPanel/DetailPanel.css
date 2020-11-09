@@ -4,4 +4,34 @@
     max-height: 100%;
     border-left: 1px solid #dddddd;
     transition: width 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-panel .footer {
+    width: 95%;
+    border: 1px solid #dddddd;
+    height: 50px;
+    margin-bottom: 25px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-panel .footer .cancel-btn, .detail-panel .footer .save-btn {
+    width: 80px;
+    height: 30px;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    outline: none;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.detail-panel .footer .save-btn {
+    color: #fff;
+    background-color: #00A2D3;
 }

@@ -3,7 +3,6 @@ import "./mainHeader.css"
 import {Logo} from '../../asset/asset'
 
 const mainHeader = () => {
-    console.log(Logo)
     return(
         <div className="main-nav">
             <div className="main-nav_content">
