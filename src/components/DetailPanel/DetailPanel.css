@@ -9,10 +9,9 @@
 }
 
 .detail-panel .footer {
-    width: 95%;
-    border: 1px solid #dddddd;
+    width: 100%;
+    border-top: 1px solid #dddddd;
     height: 50px;
-    margin-bottom: 25px;
     align-self: flex-end;
     display: flex;
     justify-content: center;
@@ -31,7 +30,19 @@
     margin: 0 5px;
 }
 
+.detail-panel .footer .cancel-btn {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .detail-panel .footer .save-btn {
     color: #fff;
-    background-color: #00A2D3;
+    background-color: #018eb9;
+    border: 1px solid #018eb9;
+    transition: all 0.2s ease-out;
+}
+
+.detail-panel .footer .save-btn:hover {
+    background-color: #00abdf;
+    border: 1px solid #00abdf;
+    transition: all 0.2s ease-in;
 }

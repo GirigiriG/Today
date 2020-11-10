@@ -8,6 +8,7 @@ const ListviewItem = ({dispatchToggleState, detailState}) => {
         // detailState.cssProperties[""] = "55%" 
         let updatedState = {
             detailIsvisible: true,
+            "display": "none",
             cssProperties: {"--detail-width": "60%", "--master-width": "40%"}
         }
         dispatchToggleState(updatedState)
@@ -15,9 +16,9 @@ const ListviewItem = ({dispatchToggleState, detailState}) => {
     return (
         <div className="listviewitem" onClick={handleToggleDispatch} >
             <div>Create Application With React</div>
-            <div></div>
-            <div></div>
-            {/* <div>Gideon G.</div> */}
+            <div style={{display: detailState.display}}>17hrs</div>
+            <div style={{display: detailState.display}}>4hrs</div>
+            <div style={{display: detailState.display}}>Gideon G.</div>
             <div>In Progress</div>
         </div>
     )

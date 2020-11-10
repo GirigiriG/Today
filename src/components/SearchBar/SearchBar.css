@@ -3,17 +3,16 @@
     height: 100%;
     outline: none;
     padding: 0.6rem;
-    text-indent: 10px;
+    text-indent: 3px;
     font-size: 0.9rem;
     border-radius: 3px;
-    border: 1px solid #c7c7c7;
-    background-color: rgba(0, 153, 255, 0.081);
+    border: 1px solid #e2e2e2;
+    background-color: rgba(151, 151, 151, 0.081);
     transition: all 0.2s ease-out;
 }
 
 .searchbar:focus {
     background-color:#ffffff;
-    border: 1px solid #00bbff;
-    box-shadow: 0 0 4px 3px #00bbff34;
+    border: 1px solid #0098cf;
     transition: all 0.2s ease-in;
 }

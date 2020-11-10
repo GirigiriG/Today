@@ -1,6 +1,5 @@
 .listviewitem {
-    width: 98%;
-    padding: 2px 1%;
+    padding: .2rem 1.7rem;
     height: 45px;
     display: flex;
     font-size: 0.9rem;
@@ -15,7 +14,7 @@
 
 .listviewitem:hover {
     border-bottom: 1px solid #19A2D3;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(134, 134, 134, 0.123);
     transition: all 0.2s ease-in;
 } 
 
@@ -33,5 +32,6 @@
 }
 
 .listviewitem div:first-child {
+    
     width: 35%;
 }
