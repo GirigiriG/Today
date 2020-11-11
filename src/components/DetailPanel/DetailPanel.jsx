@@ -5,7 +5,7 @@ const DetailPanel = ({cssprop, dispatchCSSState}) => {
     const hanldeCloseDetailOnClick = () => {
         dispatchCSSState({
             detailIsvisible: false,
-            "display": "block",
+            "toggleDisplay": {"display": "block"},
             cssProperties: {
                 "--detail-width": "0", 
                 "--master-width": "100%"

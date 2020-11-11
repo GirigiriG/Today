@@ -1,24 +1,23 @@
 import  React from "react";
 import "./Listview.css"
 import SearchBar from "../SearchBar/SearchBar"
-import { SortAZ } from "../../asset/asset";
 import ListviewItem from "../ListviewItem/ListviewItem"
 import DetailPanel from "../DetailPanel/DetailPanel"
 
 const Listview = () => {
-    const  [detailVisability, setDetailVisability] = React.useState({
+    const  [detail, setdetail] = React.useState({
         detailIsvisible : false,
         cssProperties: {},
-        "display": 'block'
+        "toggleDisplay": {'display':'block'}
     });
     const [searchState, setSearch] = React.useState("")
 
     const detailPanel = () => {
-        if(detailVisability.detailIsvisible) 
+        if(detail.detailIsvisible) 
             return (
             <DetailPanel
-                dispatchCSSState={setDetailVisability} 
-                cssprop={detailVisability.cssProperties}>
+                dispatchCSSState={setdetail} 
+                cssprop={detail.cssProperties}>
             </DetailPanel>
         )
         return <div></div>;
@@ -40,90 +39,90 @@ const Listview = () => {
                 <button>+</button>
             </div>
             <div className="master-detail">
-                <div className="master" style={detailVisability.cssProperties}>
+                <div className="master" style={detail.cssProperties}>
                     <div className="listview-item-content">
                     <div className="list-header">
                         <div>Name</div>
-                        <div style={{display: detailVisability.display}}>Estimate</div>
-                        <div style={{display: detailVisability.display}}>Remaining</div>
-                        <div style={{display: detailVisability.display}}>Owner</div>
+                        <div style={detail.toggleDisplay}>Estimate</div>
+                        <div style={detail.toggleDisplay}>Remaining</div>
+                        <div style={detail.toggleDisplay}>Owner</div>
                         <div>Status</div>
                     </div>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                         <ListviewItem 
-                            dispatchToggleState={setDetailVisability}
-                            detailState={detailVisability}>
+                            dispatchToggleState={setdetail}
+                            detail={detail}>
                         </ListviewItem>
                     </div>
                 </div>
-                {detailPanel(detailVisability)}
+                {detailPanel(detail)}
             </div>
         </div>
     )
