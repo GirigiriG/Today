@@ -1,5 +1,6 @@
 import React from "react";
 import "./DetailPanel.css"
+import TaskForm from '../TaskForm/TaskForm'
 
 const DetailPanel = ({cssprop, dispatchCSSState}) => {
     const hanldeCloseDetailOnClick = () => {
@@ -15,6 +16,9 @@ const DetailPanel = ({cssprop, dispatchCSSState}) => {
     }
     return (
         <div className="detail-panel" style={cssprop}>
+            <div className="detailform">
+                <TaskForm></TaskForm>
+            </div>
             <div className="footer">
                 <button className="save-btn">Save</button>
                 <button className="cancel-btn" onClick={hanldeCloseDetailOnClick}>Close</button>

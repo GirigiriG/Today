@@ -3,7 +3,7 @@ import "./Card.css"
 
 const Card = ({ height, children }) => {
     return(
-        <div className="card" style={{height: height}}>
+        <div className="card">
             {children}
         </div>
     )

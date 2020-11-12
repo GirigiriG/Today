@@ -1,10 +1,10 @@
 .detail-panel {
     --detail-width: 0;
     width: var(--detail-width);
-    max-height: 100%;
     border-left: 1px solid #dddddd;
     transition: width 0.2s ease-out;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -45,4 +45,14 @@
     background-color: #00abdf;
     border: 1px solid #00abdf;
     transition: all 0.2s ease-in;
+}
+
+.detailform {
+    width: 100%;
+    height: 95%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
 }
