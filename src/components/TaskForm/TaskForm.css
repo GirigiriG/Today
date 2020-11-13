@@ -31,7 +31,7 @@
     width: 90%;
     height: 100%;
     outline: none;
-    margin: 0.4rem;
+    margin: 0.8rem 0;
     padding: 0.4rem;
     text-indent: 3px;
     font-size: 0.9rem;
@@ -41,7 +41,7 @@
 }
 
 select {
-    width: 95%;
+    width: 90%;
     padding: 0.2rem;
     margin: 0.4rem 0;
 }
