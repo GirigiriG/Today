@@ -1,4 +1,4 @@
-import  React from "react";
+import  React, {useEffect} from "react";
 import "./Listview.css"
 import SearchBar from "../SearchBar/SearchBar"
 import ListviewItem from "../ListviewItem/ListviewItem"
@@ -11,6 +11,22 @@ const Listview = () => {
         "toggleDisplay": {'display':'block'}
     });
     const [searchState, setSearch] = React.useState("")
+    
+    
+    const [tasks, setTask] = React.useState({})
+    
+
+    
+    const loadData = async () => {
+        const url = `http://localhost:3000/task/find/e0cd74b1-5522-4dd9-8211-3e2b171c061e`
+        const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
+        const task = await resp.json();
+        console.log(task)
+        setTask(task);
+    } 
+     useEffect(() => {
+         loadData()
+    },[])
 
     const detailPanel = () => {
         if(detail.detailIsvisible) 
@@ -24,6 +40,7 @@ const Listview = () => {
     }
 
     return(
+        
         <div className="listview">
             <header>
                 <h3>My Current Tasks</h3>
@@ -48,75 +65,12 @@ const Listview = () => {
                         <div style={detail.toggleDisplay}>Owner</div>
                         <div>Status</div>
                     </div>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                        <ListviewItem 
+                        <ListviewItem
+                            title={tasks.TaskName}
+                            estimate={tasks.Estimate}
+                            remaining={tasks.Remaining}
+                            ownerName={tasks.OwnerName}
+                            status={tasks.Status} 
                             dispatchToggleState={setdetail}
                             detail={detail}>
                         </ListviewItem>

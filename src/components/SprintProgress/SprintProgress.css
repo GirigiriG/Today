@@ -3,6 +3,10 @@
     color: rgba(0, 0, 0, 0.75);
 }
 
+.sprint-progress:hover {
+    border: 1px solid #009CFD;
+}
+
 .sprint-progress header {
     border-bottom: 1px solid #dddddd;
 }

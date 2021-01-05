@@ -27,7 +27,7 @@ const TaskForm = () => {
         <div className="col-right">
             <input type="text" placeholder="owner"/>
            <select>
-               <option value="">In Progress</option>
+               <option value="">Active</option>
                <option value="">Hold</option>
                <option value="">Completed</option>
            </select>

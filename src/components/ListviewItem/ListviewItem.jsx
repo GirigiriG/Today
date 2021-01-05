@@ -1,7 +1,7 @@
 import React from "react";
 import "./ListviewItem.css"
 
-const ListviewItem = ({dispatchToggleState, detail}) => {
+const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status}) => {
    
     const handleToggleDispatch = () => { 
 
@@ -13,13 +13,14 @@ const ListviewItem = ({dispatchToggleState, detail}) => {
         }
         dispatchToggleState(updatedState)
     }
+
     return (
         <div className="listviewitem" onClick={handleToggleDispatch} >
-            <div>Create Application With React</div>
-            <div style={detail.toggleDisplay}>17hrs</div>
-            <div style={detail.toggleDisplay}>4hrs</div>
-            <div style={detail.toggleDisplay}>Gideon G.</div>
-            <div>In Progress</div>
+            <div>{title}</div>
+            <div style={detail.toggleDisplay}>{estimate}hrs</div>
+            <div style={detail.toggleDisplay}>{remaining}hrs</div>
+            <div style={detail.toggleDisplay}>{ownerName}</div>
+            <div style={{textAlign: "center"}}>{status}</div>
         </div>
     )
 }

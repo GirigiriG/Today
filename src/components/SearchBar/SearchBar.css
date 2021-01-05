@@ -6,13 +6,12 @@
     text-indent: 3px;
     font-size: 0.9rem;
     border-radius: 3px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #009CFD;
     background-color: rgba(151, 151, 151, 0.081);
     transition: all 0.2s ease-out;
 }
 
 .searchbar:focus {
     background-color:#ffffff;
-    border: 1px solid #0098cf;
     transition: all 0.2s ease-in;
 }
