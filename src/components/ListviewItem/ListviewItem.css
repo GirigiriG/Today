@@ -24,7 +24,7 @@
 }
 
 .listviewitem div:not(:first-child) {
-    width: 14.25%;
+    width: 10.25%;
     text-align: center;
 }
 

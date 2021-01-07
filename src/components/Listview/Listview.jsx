@@ -7,21 +7,18 @@ import DetailPanel from "../DetailPanel/DetailPanel"
 const Listview = () => {
     const  [detail, setdetail] = React.useState({
         detailIsvisible : false,
+        id: "",
         cssProperties: {},
         "toggleDisplay": {'display':'block'}
     });
-    const [searchState, setSearch] = React.useState("")
-    
-    
-    const [tasks, setTask] = React.useState({})
-    
 
-    
+    const [searchState, setSearch] = React.useState("")
+    const [tasks, setTask] = React.useState({})
+        
     const loadData = async () => {
-        const url = `http://localhost:3001/task/find/e0cd74b1-5522-4dd9-8211-3e2b171c061e`
+        const url = `http://localhost:3001/task/find/429f981f-f458-4479-96dd-ff8e1880de0c`
         const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
         const task = await resp.json();
-        console.log(task)
         setTask(task);
     } 
      useEffect(() => {
@@ -32,6 +29,7 @@ const Listview = () => {
         if(detail.detailIsvisible) 
             return (
             <DetailPanel
+                id={detail.id}
                 dispatchCSSState={setdetail} 
                 cssprop={detail.cssProperties}>
             </DetailPanel>
@@ -70,6 +68,7 @@ const Listview = () => {
                             estimate={tasks.Estimate}
                             remaining={tasks.Remaining}
                             ownerName={tasks.OwnerName}
+                            id={tasks.ID}
                             status={tasks.Status} 
                             dispatchToggleState={setdetail}
                             detail={detail}>

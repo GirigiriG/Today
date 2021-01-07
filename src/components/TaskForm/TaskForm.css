@@ -9,7 +9,6 @@
     background-color: #ffffff;
 }
 
-
 .taskform .col-left, .taskform .col-right {
     width: 50%;
     display: flex;
@@ -39,7 +38,7 @@
     outline: none;
     margin-top: 0.2rem;
     margin-bottom: 0.8rem;
-    text-indent: 3px;
+    text-indent: 0.3rem;
     font-size: 0.9rem;
     border-radius: 3px;
     border: 1px solid #c7c5c5;

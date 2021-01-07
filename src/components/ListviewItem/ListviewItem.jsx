@@ -1,13 +1,14 @@
 import React from "react";
 import "./ListviewItem.css"
 
-const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status}) => {
+const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status, id}) => {
    
     const handleToggleDispatch = () => { 
 
         // detail.cssProperties[""] = "55%" 
         let updatedState = {
             detailIsvisible: true,
+            id: id,
             "toggleDisplay": {"display":"none"},
             cssProperties: {"--detail-width": "50%", "--master-width": "50%"}
         }
