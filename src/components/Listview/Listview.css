@@ -1,5 +1,4 @@
 .listview {
-    margin-bottom: 15px;
     background-color: #fff;
     border: 1px solid #d4d4d4;
     color: rgba(0, 0, 0, 0.700);
@@ -64,7 +63,7 @@
 
 .list-header {
     display: flex;
-    padding: 15px 1%;
+    padding: 1rem 1%;
     color: rgba(0, 0, 0, 0.70);
     font-weight: 400;
     text-align: left;
@@ -86,7 +85,5 @@
 }
 
 .list-header div:first-child {
-    padding: .2rem 1rem;
-    padding-right: none;
-    width : 33%; 
+    width : 32%; 
 }

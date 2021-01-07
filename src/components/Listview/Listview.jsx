@@ -18,7 +18,7 @@ const Listview = () => {
 
     
     const loadData = async () => {
-        const url = `http://localhost:3000/task/find/e0cd74b1-5522-4dd9-8211-3e2b171c061e`
+        const url = `http://localhost:3001/task/find/e0cd74b1-5522-4dd9-8211-3e2b171c061e`
         const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
         const task = await resp.json();
         console.log(task)

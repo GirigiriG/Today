@@ -1,5 +1,5 @@
 .searchbar {
-    width: 100%;
+    width: 70%;
     height: 100%;
     outline: none;
     padding: 0.6rem;
@@ -12,6 +12,7 @@
 }
 
 .searchbar:focus {
+    width: 100%;
     background-color:#ffffff;
     transition: all 0.2s ease-in;
 }

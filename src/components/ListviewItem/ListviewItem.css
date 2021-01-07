@@ -1,9 +1,10 @@
 .listviewitem {
-    padding: .2rem 1.5rem;
-    height: 35px;
+    padding: .2rem 1%;
+    height: 28px;
     display: flex;
     font-size: 0.86rem;
     justify-content: space-between;
+    text-transform: capitalize;
     align-items: center;
     text-align: left;
     border-bottom: 1px solid #dddddd;
@@ -14,16 +15,12 @@
 
 .listviewitem:hover {
     border-bottom: 1px solid #19A2D3;
-    background-color: rgba(134, 134, 134, 0.123);
+    background-color: rgba(201, 201, 201, 0.123);
     transition: all 0.2s ease-in;
 } 
 
 .listviewitem div {
-    color: rgba(0, 0, 0, 0.60);
-}
-
-.listviewitem div:hover {
-    color: rgba(0, 0, 0, 0.705);
+    color: rgba(0, 0, 0, 0.804);
 }
 
 .listviewitem div:not(:first-child) {
@@ -32,6 +29,7 @@
 }
 
 .listviewitem div:first-child {
-    
-    width: 35%;
+    color: rgb(0, 119, 255);
+    font-weight: 400;
+    width: 32%;
 }

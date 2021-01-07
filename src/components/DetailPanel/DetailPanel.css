@@ -2,7 +2,6 @@
     --detail-width: 0;
     width: var(--detail-width);
     border-left: 1px solid #dddddd;
-    transition: width 0.2s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
