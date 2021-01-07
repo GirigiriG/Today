@@ -3,7 +3,7 @@
     height: 100%;
     padding: 0 0.5rem;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     display: flex;
     overflow-y: scroll;
     background-color: #ffffff;
@@ -18,20 +18,27 @@
 } 
 
 .taskform .col-left {
+    width: 45%;
     justify-content: flex-start;
 }
 
 .taskform .col-right {
+    width: 45%;
     justify-content: flex-end;
+}
+
+.taskform .col-left p, 
+.taskform .col-right p {
+    color: #00000081;
+    font-size: 0.8rem;
 }
 
 .taskform .col-left input[type=text], 
 .taskform .col-right input[type=text] {
-    width: 90%;
-    height: 100%;
+    height: 24px;
     outline: none;
-    margin: 0.8rem 0;
-    padding: 0.4rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
     text-indent: 3px;
     font-size: 0.9rem;
     border-radius: 3px;
@@ -40,7 +47,7 @@
 }
 
 select {
-    width: 94%;
+    width: 100%;
     padding: 0.2rem;
     margin: 0.4rem 0;
 }

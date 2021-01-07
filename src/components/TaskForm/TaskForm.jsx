@@ -21,11 +21,15 @@ const TaskForm = () => {
     return (
         <div className="taskform">
         <div className="col-left">
-            <input type="text" placeholder="name"/>
+            <p>Name</p>
+            <input type="text"/>
             
         </div>
         <div className="col-right">
-            <input type="text" placeholder="owner"/>
+            <p>Owner</p>
+            <input type="text"/>
+
+            <p>Status</p>
            <select>
                <option value="">Active</option>
                <option value="">Hold</option>
