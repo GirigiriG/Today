@@ -13,13 +13,13 @@ const Listview = () => {
     });
 
     const [searchState, setSearch] = React.useState("")
-    const [tasks, setTask] = React.useState({})
+    const [tasks, setTask] = React.useState([])
         
     const loadData = async () => {
-        const url = `http://localhost:3001/task/find/429f981f-f458-4479-96dd-ff8e1880de0c`
+        const url = `http://localhost:3001/task/project/b4ec0fe0-4d69-4bd1-bb89-fb40fea02c7c`
         const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
-        const task = await resp.json();
-        setTask(task);
+        const tasks = await resp.json();
+        setTask(tasks);
     } 
      useEffect(() => {
          loadData()
@@ -63,16 +63,19 @@ const Listview = () => {
                         <div style={detail.toggleDisplay}>Owner</div>
                         <div>Status</div>
                     </div>
-                        <ListviewItem
-                            title={tasks.TaskName}
-                            estimate={tasks.Estimate}
-                            remaining={tasks.Remaining}
-                            ownerName={tasks.OwnerName}
-                            id={tasks.ID}
-                            status={tasks.Status} 
+                    {tasks.map((task, key) => {    
+                        return <ListviewItem
+                            key={key}
+                            title={task.TaskName}
+                            estimate={task.Estimate}
+                            remaining={task.Remaining}
+                            ownerName={task.OwnerName}
+                            id={task.ID}
+                            status={task.Status} 
                             dispatchToggleState={setdetail}
                             detail={detail}>
                         </ListviewItem>
+                    })}    
                     </div>
                 </div>
                 {detailPanel(detail)}

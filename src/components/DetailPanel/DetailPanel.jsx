@@ -13,7 +13,6 @@ const DetailPanel = ({cssprop, dispatchCSSState, id}) => {
     } 
 
      useEffect(() => {
-
          loadData()
     },[])
 

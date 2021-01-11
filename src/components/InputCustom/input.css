@@ -1,0 +1,46 @@
+.custom-input {
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+}
+.custom-input input {
+    padding: 0.5rem 0;
+    text-indent: 0.3rem;
+}
+
+.custom-input .results, .custom-input input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+.custom-input .results {
+    border-top: none;
+    position: absolute;
+    z-index: 999;
+    background-color: #ffffff;
+    top: 1.99rem;
+}
+
+.results .items {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0.5rem 0.4rem;
+}
+
+.results .items:hover > p{
+    color: rgb(0, 110, 255);
+}
+.results .items:hover {
+    border-bottom: 1px solid rgb(0, 110, 255);
+}
+
+.results .items:last-child {
+    border-bottom: none;
+}
+
+.results .items p {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.877);
+}

@@ -4,8 +4,7 @@ import "./ListviewItem.css"
 const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status, id}) => {
    
     const handleToggleDispatch = () => { 
-
-        // detail.cssProperties[""] = "55%" 
+        console.log(id)
         let updatedState = {
             detailIsvisible: true,
             id: id,
@@ -21,7 +20,7 @@ const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, 
             <div style={detail.toggleDisplay}>{estimate}hrs</div>
             <div style={detail.toggleDisplay}>{remaining}hrs</div>
             <div style={detail.toggleDisplay}>{ownerName}</div>
-            <div style={{textAlign: "center"}}>{status}</div>
+            <div> {status}</div>
         </div>
     )
 }
