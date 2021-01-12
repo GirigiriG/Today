@@ -48,7 +48,7 @@
     --master-width: 100%;
     width: var(--master-width);
     overflow-y: scroll;
-    height: 900px;
+    height: 76vh;
     transition: width 0.2s ease-in;
 }
 
@@ -64,13 +64,16 @@
 }
 
 .list-header {
+    --master-width: 100%;
+    width: var(--master-width);
     display: flex;
-    padding: 1rem 1%;
+    padding: 0.7rem 0%;
     color: rgba(0, 0, 0, 0.70);
-    font-weight: 400;
+    font-weight: bold;
+    background-color: rgb(240, 240, 240);
     text-align: left;
     flex-direction: row;
-    border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid #a0a0a0;    
     justify-content: space-between;
 }
 
@@ -87,5 +90,6 @@
 }
 
 .list-header div:first-child {
+    text-indent: 0.5rem;
     width : 32%; 
 }

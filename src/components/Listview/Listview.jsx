@@ -18,8 +18,10 @@ const Listview = () => {
     const loadData = async () => {
         const url = `http://localhost:3001/task/project/b4ec0fe0-4d69-4bd1-bb89-fb40fea02c7c`
         const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
-        const tasks = await resp.json();
-        setTask(tasks);
+        if(resp != null) {
+            const tasks = await resp.json();
+            setTask(tasks);
+        }
     } 
      useEffect(() => {
          loadData()
@@ -53,16 +55,17 @@ const Listview = () => {
                 </div>
                 <button>+</button>
             </div>
+            <div className="list-header" style={detail.cssProperties}>
+                <div>Name</div>
+                <div style={detail.toggleDisplay}>Estimate</div>
+                <div style={detail.toggleDisplay}>Remaining</div>
+                <div style={detail.toggleDisplay}>Owner</div>
+                <div>Status</div>
+            </div>
+
             <div className="master-detail">
                 <div className="master" style={detail.cssProperties}>
                     <div className="listview-item-content">
-                    <div className="list-header">
-                        <div>Name</div>
-                        <div style={detail.toggleDisplay}>Estimate</div>
-                        <div style={detail.toggleDisplay}>Remaining</div>
-                        <div style={detail.toggleDisplay}>Owner</div>
-                        <div>Status</div>
-                    </div>
                     {tasks.map((task, key) => {    
                         return <ListviewItem
                             key={key}

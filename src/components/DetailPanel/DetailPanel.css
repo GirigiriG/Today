@@ -10,11 +10,12 @@
 .detail-panel .footer {
     width: 100%;
     border-top: 1px solid #dddddd;
-    height: 56px;
+    height: 30px;
     align-self: flex-end;
     display: flex;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     justify-content: center;
+    align-items: center;
 }
 
 .detail-panel .footer .cancel-btn, .detail-panel .footer .save-btn {
