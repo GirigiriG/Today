@@ -8,7 +8,7 @@ const DetailPanel = ({cssprop, dispatchCSSState, id}) => {
         const url = `http://localhost:3001/task/find/${id}`
         const resp = await fetch(url, {method: "GET"}).catch(() => console.error())
         const task = await resp.json();
-        console.log(task)
+    
         setTask(task);
     } 
 

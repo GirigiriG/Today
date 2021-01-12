@@ -1,11 +1,17 @@
 .custom-input {
     width: 100%;
     position: relative;
+    margin: 0.5rem 0;
     background-color: #ffffff;
 }
 .custom-input input {
+    border: none;
+    position: relative;
+    z-index: 33;
+    outline: none;
     padding: 0.5rem 0;
     text-indent: 0.3rem;
+    border-radius: 3px;
 }
 
 .custom-input .results, .custom-input input {
@@ -14,33 +20,50 @@
 }
 
 .custom-input .results {
+    z-index: 999;
+    top: 1.945rem;
     border-top: none;
     position: absolute;
-    z-index: 999;
     background-color: #ffffff;
-    top: 1.99rem;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
-.results .items {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.342);
+
+.custom-input .read-only {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.753);
+    width: 98%;
+    margin: 0 auto;
+    height: 29px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 162, 255);
+    background-color: #ffffff;
+    z-index: 999;
+    position: absolute;
+    bottom: 0rem;
+    padding-left: 1%;
+    /* right: 0.15rem; */
+    /* left: 0.25rem; */
+}
+.custom-input .read-only i {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.custom-input .read-only .close {
+    margin-left: auto;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: bolder;
     cursor: pointer;
-    text-transform: uppercase;
-    padding: 0.5rem 0.4rem;
+    margin-bottom: 4px;
+    color: rgb(209, 0, 0);
 }
 
-.results .items:hover > p{
-    color: rgb(0, 110, 255);
-}
-.results .items:hover {
-    border-bottom: 1px solid rgb(0, 110, 255);
-}
-
-.results .items:last-child {
-    border-bottom: none;
-}
-
-.results .items p {
-    font-size: 14px;
-    text-transform: capitalize;
-    color: rgba(0, 0, 0, 0.877);
-}

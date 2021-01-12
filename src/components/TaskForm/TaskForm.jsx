@@ -6,13 +6,19 @@ const TaskForm = ({id, TaskName, OwnerName, Status}) => {
     return (
         <div className="taskform">
             <div className="col-left">
-                <p>Name</p>
-                <input type="text" value={TaskName}/>
+                <p>Task Name</p>
+                <Input 
+                placeholdertext={"Task Name"}
+                type="task">
+                </Input>
                 
             </div>
             <div className="col-right">
                 <p>Owner</p>
-                <Input type="task"></Input>
+                <Input 
+                placeholdertext={"John Doe"}
+                type="app_user">
+                </Input>
                 <p>Status</p>
             <select>
                 <option value="">{Status}</option>

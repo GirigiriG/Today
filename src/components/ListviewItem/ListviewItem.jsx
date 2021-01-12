@@ -4,7 +4,6 @@ import "./ListviewItem.css"
 const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status, id}) => {
    
     const handleToggleDispatch = () => { 
-        console.log(id)
         let updatedState = {
             detailIsvisible: true,
             id: id,

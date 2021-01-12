@@ -28,8 +28,8 @@
 
 .taskform .col-left p, 
 .taskform .col-right p {
-    color: #00000081;
-    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 0.9rem;
 }
 
 .taskform .col-left input[type=text], 
@@ -47,7 +47,7 @@
 
 select {
     width: 100%;
-    padding: 0.2rem;
-    margin: 0.4rem 0;
+    padding: 0.4rem 0.2rem;
+    margin: 0.2rem 0;
 }
 

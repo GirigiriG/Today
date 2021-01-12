@@ -1,0 +1,40 @@
+.item {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0.3rem 0.4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(255, 255, 255); 
+}
+
+.item:hover {
+    background-color: rgba(0, 140, 255, 0.205);
+    border-bottom: 1px solid rgb(0, 140, 255);
+}
+
+.item:hover > p {
+    color: rgb(0, 110, 255);
+}
+
+.item:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.item p {
+    text-transform: lowercase;
+}
+
+.item p {
+    font-weight: bold;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.item .icon {
+    display: inline-block;
+    padding-top: 0.2rem;
+    margin-right: 0.5rem;
+}
+

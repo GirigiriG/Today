@@ -22,10 +22,22 @@ export const SortAZ = () => {
 }
 
 export const TaskIcon = () => {
-    return <span>
-        <svg aria-hidden="true" focusable="false" height="12" width="12"  data-prefix="fas" data-icon="tasks" class="svg-inline--fa fa-tasks fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg>
-    </span>
+    return <svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
+            <g id="Rectangle_1" data-name="Rectangle 1" fill="#0920e8" stroke="#0920e8" strokeWidth="1">
+                <rect width="32" height="32" stroke="none"/>
+                <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+            </g>
+            <text id="T" transform="translate(9 25)" fill="#fff" fontSize="24" fontFamily="HelveticaNeue-Bold, Helvetica Neue" fontWeight="700"><tspan x="0" y="0">T</tspan></text>
+        </svg>
 }
 
+export const UserIcon = () => {
+    return <svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
+                <g id="Rectangle_1" data-name="Rectangle 1" fill="#14955c" stroke="#00955c" strokeWidth="1">
+                    <rect width="32" height="32" stroke="none"/>
+                    <rect x="0.5" y="0.5" width="31" height="31" fill="none"/>
+                </g>
+                <text id="U" transform="translate(7 25)" fill="#fff" fontSize="24" fontFamily="HelveticaNeue-Bold, Helvetica Neue" fontWeight="700"><tspan x="0" y="0">U</tspan></text>
+            </svg>
 
-
+}
