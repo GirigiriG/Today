@@ -31,7 +31,6 @@ const Input = ({type}) => {
 
 const readOnlyCard = () => {
     if(isReadOnly) {
-
        return (
         <div className="read-only">
             <i>{getIcon(type)}</i>
@@ -64,11 +63,11 @@ return(
         <div className="results">
             {tasks.map(task => 
                 <SearchItem 
-                key={task.ID} 
-                task={task}
-                type={type}
-                handleSetRecordName={setName}
-                editModeDispatch={setReadOnly}>
+                    key={task.ID} 
+                    task={task}
+                    type={type}
+                    handleSetRecordName={setName}
+                    editModeDispatch={setReadOnly}>
                 </SearchItem>)
             }
         </div>

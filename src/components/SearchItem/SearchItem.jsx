@@ -5,7 +5,7 @@ import {TaskIcon, UserIcon} from "../../asset/asset"
 
 const SearchItem = ({task, type, editModeDispatch, handleSetRecordName}) => {
     const recordName = React.createRef();
-    const [editAble, setEditable] = useState(false)
+    const [editAble, ] = useState(false)
     
     const getIcon = (type) => {
     switch (type) {
