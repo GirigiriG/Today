@@ -23,7 +23,7 @@
     height: 30px;
     padding: 0.2rem 1rem;
     cursor: pointer;
-    border: 1px solid #cccccc;
+    border: 1px solid #dddddd;
     outline: none;
     background-color: #f0f0f0;
     border-radius: 3px;
@@ -37,13 +37,13 @@
 .detail-panel .footer .save-btn {
     color: #fff;
     background-color: #018eb9;
-    border: 1px solid #018eb9;
+    border: 1px solid #dddddd;
     transition: all 0.2s ease-out;
 }
 
 .detail-panel .footer .save-btn:hover {
     background-color: #00abdf;
-    border: 1px solid #00abdf;
+    border: 1px solid #dddddd;
     transition: all 0.2s ease-in;
 }
 

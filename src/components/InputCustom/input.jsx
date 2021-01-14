@@ -11,7 +11,7 @@ const Input = ({type}) => {
     const handleOnChange = async (event) => {
         let name = event.target.value.replace(" ", encodeURIComponent('+'));
         
-        if (name.length >= 3) {
+        if(name.length >= 3 && name != null) {
             const url = `http://localhost:3001/get/record/?name=${name}&type=${type}`
             let content = await fetch(url).catch(err => err)
             

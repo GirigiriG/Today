@@ -2,7 +2,7 @@
     height: 92vh;
     overflow-y: hidden;
     background-color: #fff;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #dddddd;
     color: rgba(0, 0, 0, 0.700);
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid #dddddd;
     padding:  1rem 2rem;
 }
 
@@ -73,7 +73,8 @@
     background-color: rgb(252, 252, 252);
     text-align: left;
     flex-direction: row;
-    border-bottom: 1px solid #a0a0a0;    
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;    
     justify-content: space-between;
 }
 
