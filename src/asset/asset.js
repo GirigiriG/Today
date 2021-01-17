@@ -41,3 +41,28 @@ export const UserIcon = () => {
             </svg>
 
 }
+
+
+export const ControlIconBold = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+            <g id="Group_1" data-name="Group 1" transform="translate(-329 -172)">
+                <rect id="Rectangle_1" data-name="Rectangle 1" width="25" height="25" transform="translate(329 172)" fill="#fff"/>
+                <text id="B" transform="translate(335 192)" font-size="20" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">B</tspan></text>
+            </g>
+        </svg>
+
+}
+
+export const getIcon = (type) => {
+    switch (type) {
+        case "app_user":
+            return UserIcon()
+        case "task":
+            return TaskIcon()
+        case "controlBold":
+        return ControlIconBold()
+        default:
+            return <i></i>
+    }
+}
+

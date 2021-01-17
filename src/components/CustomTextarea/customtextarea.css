@@ -1,0 +1,29 @@
+.textarea-wrapper {
+    width: 100%;
+    /* position: relative; */
+}
+
+.textarea-wrapper .textarea {
+    padding: 1%;
+    width: 98%;
+    height: 125px;
+    padding-top: 2%;
+    border: 1px solid #dddddd;
+}
+
+.textarea-wrapper .control {
+    width: 98%;
+    padding: 1%;
+    height: 25px;
+    margin: 0 auto;
+    /* position: absolute; */
+    border-bottom: 1px solid #dddddd;
+}
+
+.textarea-wrapper .control .icon {
+    width: 15px;
+    height: 100%;
+    background-color: #cccccc;
+    cursor: pointer;
+}
+

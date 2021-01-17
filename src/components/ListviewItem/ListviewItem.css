@@ -29,9 +29,12 @@
 }
 
 .listviewitem div:first-child {
-    color: rgb(0, 119, 255);
-    font-weight: 400;
     width: 32%;
+    overflow: hidden;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(0, 119, 255);
 }
 
 .listviewitem:last-child {
