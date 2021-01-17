@@ -52,6 +52,44 @@ export const ControlIconBold = () => {
         </svg>
 
 }
+export const JustifyLeft = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+              <path id="Icon_open-justify-left" data-name="Icon open-justify-left" d="M0,0V2.143H15V0ZM0,4.286V6.429H15V4.286ZM0,8.571v2.143H15V8.571Zm0,4.286V15H11.25V12.857Z"/>
+           </svg>
+
+
+}
+export const JustifyCenter = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_open-justify-center" data-name="Icon open-justify-center" d="M0,0V2.143H15V0ZM0,4.286V6.429H15V4.286ZM0,8.571v2.143H15V8.571Zm1.875,4.286V15h11.25V12.857Z"/>
+           </svg>
+
+
+}
+export const JustifyRight = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_open-justify-right" data-name="Icon open-justify-right" d="M0,0V2.143H15V0ZM0,4.286V6.429H15V4.286ZM0,8.571v2.143H15V8.571Zm3.75,4.286V15H15V12.857Z"/>
+        </svg>
+}
+
+export const OrderedList = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_metro-list-numbered" data-name="Icon metro-list-numbered" d="M9.5,14.116h10v1.875H9.5Zm0-5.625h10v1.875H9.5Zm0-5.625h10V4.741H9.5Zm-3-.938v3.75h-1V2.866h-1V1.928Zm-1,7.705v.732h2V11.3h-3V9.164l2-.879V7.553h-2V6.616h3V8.754Zm2,2.607v4.687h-3v-.937h2v-.938h-2v-.937h2v-.937h-2v-.937Z" transform="translate(-4.499 -1.928)"/>
+        </svg>
+}
+
+export const UnOrderedList = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_metro-list" data-name="Icon metro-list" d="M2.571,1.928h3.75v3.75H2.571ZM8.2,2.866h9.375V4.741H8.2ZM2.571,7.553h3.75V11.3H2.571ZM8.2,8.491h9.375v1.875H8.2ZM2.571,13.178h3.75v3.75H2.571Zm5.625.938h9.375v1.875H8.2Z" transform="translate(-2.571 -1.928)"/>
+        </svg>
+}
+
+export const ImageInsert = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_metro-image" data-name="Icon metro-image" d="M16.632,4.927l0,0V17.783l0,0H3.51l0,0V4.929l0,0Zm0-1.071H3.508a1.014,1.014,0,0,0-.937,1.071V17.785a1.014,1.014,0,0,0,.938,1.071H16.633a1.014,1.014,0,0,0,.937-1.071V4.927a1.014,1.014,0,0,0-.937-1.071Zm-1.875,3.75a1.517,1.517,0,0,1-1.406,1.607,1.517,1.517,0,0,1-1.406-1.607A1.517,1.517,0,0,1,13.352,6a1.517,1.517,0,0,1,1.406,1.607Zm.938,9.107H4.446V14.57L7.727,8.142l3.75,5.357h.938L15.7,10.285Z" transform="translate(-2.571 -3.856)"/>
+        </svg>
+
+}
 
 export const getIcon = (type) => {
     switch (type) {

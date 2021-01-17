@@ -29,7 +29,7 @@ const TaskForm = ({id, TaskName, OwnerName, Status}) => {
                 </div>
             </div>
             <div className="col-one">
-                <Textarea></Textarea>
+                <Textarea name="Description"></Textarea>
             </div>
         </div>
     )

@@ -1,29 +1,44 @@
 .textarea-wrapper {
     width: 100%;
-    /* position: relative; */
+    position: relative;
 }
 
 .textarea-wrapper .textarea {
     padding: 1%;
-    width: 98%;
+    width: 95%;
     height: 125px;
-    padding-top: 2%;
+    padding-top: 8%;
+    padding-left: 1rem;
     border: 1px solid #dddddd;
+}
+
+.textarea ol, .textarea ul {
+    padding-left: 2.5rem;
+}
+
+.textarea-wrapper .name   {
+    margin-bottom: 0.5rem;
 }
 
 .textarea-wrapper .control {
     width: 98%;
-    padding: 1%;
+    padding: 1% 0.5%;
     height: 25px;
     margin: 0 auto;
-    /* position: absolute; */
-    border-bottom: 1px solid #dddddd;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
 }
 
-.textarea-wrapper .control .icon {
+.textarea-wrapper .control .iconwrapper {
     width: 15px;
-    height: 100%;
-    background-color: #cccccc;
+    height: 15px;
+    display: flex;
+    margin: 0 1rem;
     cursor: pointer;
 }
 
+.textarea-wrapper .control .iconwrapper .icon {
+    margin: 0 0.5rem;
+}
