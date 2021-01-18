@@ -6,12 +6,17 @@
 
 .textarea-wrapper .textarea {
     width: 95%;
-    height: 250px;
+    height: 150px;
+    max-height: 250px;
     padding: 0 2.5%;
-    padding-top: 4rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    margin-top: 4rem;
     overflow-y: scroll;
     border: 1px solid #cccccc;
+}
+
+.textarea-wrapper .textarea:hover {
+    border: 1px solid rgb(0, 162, 255);
 }
 
 
@@ -32,8 +37,12 @@
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+    border: 1px solid #cccccc;
     top: 3.5rem;
+}
+
+.textarea-wrapper .control:hover {
+    border: 1px solid rgb(0, 162, 255);
 }
 
 .textarea-wrapper .control .iconwrapper {
@@ -58,5 +67,6 @@
     outline: none;
     background: #fff;
     position: absolute;
+    cursor: pointer;
     bottom: 7px;
 }
