@@ -8,19 +8,26 @@ const TaskForm = ({id, TaskName, OwnerName, Status}) => {
         <div className="taskform">
             <div className="col-two">
                 <div className="col-left">
-                    <p>Task Name</p>
                     <Input 
                     placeholdertext={"Task Name"}
+                    name="Task Name"
+                    required={true}
+                    type="task">
+                    </Input>
+
+                    <Input 
+                    placeholdertext={"Task Name"}
+                    name="Estimate Hours"
                     type="task">
                     </Input>
                 </div>
                 <div className="col-right">
-                    <p>Owner</p>
                     <Input 
                     placeholdertext={"John Doe"}
+                    name="Owner"
                     type="app_user">
                     </Input>
-                    <p>Status</p>
+                    <p className="status-label">Status</p>
                     <select>
                         <option value="">{Status}</option>
                         <option value="">Hold</option>

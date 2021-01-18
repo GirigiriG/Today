@@ -3,14 +3,17 @@
     position: relative;
 }
 
+
 .textarea-wrapper .textarea {
-    padding: 1%;
     width: 95%;
-    height: 125px;
-    padding-top: 8%;
-    padding-left: 1rem;
-    border: 1px solid #dddddd;
+    height: 250px;
+    padding: 0 2.5%;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+    overflow-y: scroll;
+    border: 1px solid #cccccc;
 }
+
 
 .textarea ol, .textarea ul {
     padding-left: 2.5rem;
@@ -22,23 +25,38 @@
 
 .textarea-wrapper .control {
     width: 98%;
-    padding: 1% 0.5%;
+    padding: 1% 0.75%;
     height: 25px;
-    margin: 0 auto;
-    position: absolute;
+    margin: 12px auto;
+    position: relative;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #cccccc;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.33);
+    top: 3.5rem;
 }
 
 .textarea-wrapper .control .iconwrapper {
     width: 15px;
     height: 15px;
     display: flex;
-    margin: 0 1rem;
     cursor: pointer;
 }
 
 .textarea-wrapper .control .iconwrapper .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 0.5rem;
+}
+
+.textarea-wrapper input[type=color] {
+    width: 25px;
+    height: 25px;
+    border: none;
+    margin-left: 10px;
+    outline: none;
+    background: #fff;
+    position: absolute;
+    bottom: 7px;
 }

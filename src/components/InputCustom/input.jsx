@@ -1,18 +1,18 @@
 import "./input.css"
 import React, {useState } from "react";
 import  SearchItem from "../../components/SearchItem/SearchItem";
-import {TaskIcon, UserIcon} from "../../asset/asset"
+import {TaskIcon, UserIcon, CloseIcon} from "../../asset/asset"
 
-const Input = ({type}) => {
+const Input = ({type, name, required}) => {
     const [tasks, setTasks] = useState([])
     const [isReadOnly, setReadOnly] = useState(false)
-    const [name, setName] = useState("")
+    const [recordName, setRecordName] = useState("")
     
     const handleOnChange = async (event) => {
-        let name = event.target.value.replace(" ", encodeURIComponent('+'));
+        let recordName = event.target.value.replace(" ", encodeURIComponent('+'));
         
-        if(name.length >= 3 && name != null) {
-            const url = `http://localhost:3001/get/record/?name=${name}&type=${type}`
+        if(recordName.length >= 3 && recordName != null) {
+            const url = `http://localhost:3001/get/record/?name=${recordName}&type=${type}`
             let content = await fetch(url).catch(err => err)
             
             if(content.status === 200) {
@@ -34,12 +34,39 @@ const readOnlyCard = () => {
        return (
         <div className="read-only">
             <i>{getIcon(type)}</i>
-            <p>{name}</p>
-            <p className="close" onClick={() => setReadOnly(false)}>x</p>
+            <p>{recordName}</p>
+            <p className="close" onClick={() => setReadOnly(false)}>
+                <CloseIcon></CloseIcon>
+            </p>
         </div>
        )
     }
     return <div></div>
+}
+
+const label = () => {
+    if(required){
+        return <p><span className="asterisk">*</span>{name}</p>
+    }
+    return <p>{name}</p>
+}
+
+const showResults = () => {
+    if (tasks.length) {
+        return (
+        <div className="results">
+            {tasks.map(task => 
+                <SearchItem 
+                key={task.ID} 
+                task={task}
+                type={type}
+                handleSetRecordName={setRecordName}
+                editModeDispatch={setReadOnly}>
+                </SearchItem>)
+            }
+        </div>
+        )
+    }
 }
 
 const getIcon = (type) => {
@@ -56,21 +83,12 @@ const getIcon = (type) => {
 
 return(
     <div className="custom-input">
+        {label()}
         <input
         onChange={handleOnChange}
         onBlur={handleBlur}/>
         {readOnlyCard()}    
-        <div className="results">
-            {tasks.map(task => 
-                <SearchItem 
-                    key={task.ID} 
-                    task={task}
-                    type={type}
-                    handleSetRecordName={setName}
-                    editModeDispatch={setReadOnly}>
-                </SearchItem>)
-            }
-        </div>
+        {showResults()}
     </div>
     )
 }

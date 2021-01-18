@@ -43,13 +43,11 @@ export const UserIcon = () => {
 }
 
 
-export const ControlIconBold = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
-            <g id="Group_1" data-name="Group 1" transform="translate(-329 -172)">
-                <rect id="Rectangle_1" data-name="Rectangle 1" width="25" height="25" transform="translate(329 172)" fill="#fff"/>
-                <text id="B" transform="translate(335 192)" font-size="20" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">B</tspan></text>
-            </g>
-        </svg>
+export const BoldIcon = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+              <path id="Icon_awesome-bold" data-name="Icon awesome-bold" d="M14.161,9.147a3.734,3.734,0,0,0,1.1-2.183c.3-2.555-2.145-4.714-5.194-4.714H1.92a.6.6,0,0,0-.654.536V4.393a.6.6,0,0,0,.654.536h1.3v9.643H1.92a.6.6,0,0,0-.654.536v1.607a.6.6,0,0,0,.654.536h8.556c2.894,0,5.483-1.733,5.763-4.1A4.216,4.216,0,0,0,14.161,9.147ZM6.484,4.929h3.587a1.811,1.811,0,0,1,1.962,1.607,1.811,1.811,0,0,1-1.962,1.607H6.484Zm3.587,9.643H6.484v-3.75h3.587A2.113,2.113,0,0,1,12.36,12.7a2.113,2.113,0,0,1-2.289,1.875Z" transform="translate(-1.266 -2.25)"/>
+           </svg>
+
 
 }
 export const JustifyLeft = () => {
@@ -61,7 +59,7 @@ export const JustifyLeft = () => {
 }
 export const JustifyCenter = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-            <path id="Icon_open-justify-center" data-name="Icon open-justify-center" d="M0,0V2.143H15V0ZM0,4.286V6.429H15V4.286ZM0,8.571v2.143H15V8.571Zm1.875,4.286V15h11.25V12.857Z"/>
+              <path id="Icon_open-justify-center" data-name="Icon open-justify-center" d="M0,0V2.143H15V0ZM0,4.286V6.429H15V4.286ZM0,8.571v2.143H15V8.571Zm1.875,4.286V15h11.25V12.857Z"/>
            </svg>
 
 
@@ -88,8 +86,33 @@ export const ImageInsert = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <path id="Icon_metro-image" data-name="Icon metro-image" d="M16.632,4.927l0,0V17.783l0,0H3.51l0,0V4.929l0,0Zm0-1.071H3.508a1.014,1.014,0,0,0-.937,1.071V17.785a1.014,1.014,0,0,0,.938,1.071H16.633a1.014,1.014,0,0,0,.937-1.071V4.927a1.014,1.014,0,0,0-.937-1.071Zm-1.875,3.75a1.517,1.517,0,0,1-1.406,1.607,1.517,1.517,0,0,1-1.406-1.607A1.517,1.517,0,0,1,13.352,6a1.517,1.517,0,0,1,1.406,1.607Zm.938,9.107H4.446V14.57L7.727,8.142l3.75,5.357h.938L15.7,10.285Z" transform="translate(-2.571 -3.856)"/>
         </svg>
-
 }
+
+export const ItalicIcon = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+            <path id="Icon_awesome-italic" data-name="Icon awesome-italic" d="M15,2.786V3.857c0,.3-.336.536-.75.536H11.308L7.558,15.107H9.75c.414,0,.75.24.75.536v1.071c0,.3-.336.536-.75.536h-9c-.414,0-.75-.24-.75-.536V15.643c0-.3.336-.536.75-.536H3.692L7.442,4.393H5.25c-.414,0-.75-.24-.75-.536V2.786c0-.3.336-.536.75-.536h9C14.664,2.25,15,2.49,15,2.786Z" transform="translate(0 -2.25)"/>
+        </svg>
+}
+
+export const UnderLineIcon = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                <path id="Icon_awesome-underline" data-name="Icon awesome-underline" d="M1.071,1.875H2.143V6.563c0,2.585,2.4,4.688,5.357,4.688s5.357-2.1,5.357-4.687V1.875h1.071a.506.506,0,0,0,.536-.469V.469A.506.506,0,0,0,13.929,0H9.107a.506.506,0,0,0-.536.469v.937a.506.506,0,0,0,.536.469h1.071V6.563A2.528,2.528,0,0,1,7.5,8.906,2.528,2.528,0,0,1,4.821,6.563V1.875H5.893a.506.506,0,0,0,.536-.469V.469A.506.506,0,0,0,5.893,0H1.071A.506.506,0,0,0,.536.469v.937a.506.506,0,0,0,.536.469Zm13.393,11.25H.536A.506.506,0,0,0,0,13.594v.938A.506.506,0,0,0,.536,15H14.464A.506.506,0,0,0,15,14.531v-.937A.506.506,0,0,0,14.464,13.125Z"/>
+            </svg>
+}
+
+export const StrikeThroughIcon = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                <path id="Icon_awesome-strikethrough" data-name="Icon awesome-strikethrough" d="M14.531,8.679H8.61l-2.554-.9A1.479,1.479,0,0,1,5.17,6.17,1.343,1.343,0,0,1,6.432,4.929H8.389A1.455,1.455,0,0,1,9.7,5.852a.443.443,0,0,0,.629.239l1.258-.719a.573.573,0,0,0,.21-.719l-.016-.033A3.733,3.733,0,0,0,8.423,2.25H6.431A3.438,3.438,0,0,0,3.75,3.609a4.53,4.53,0,0,0-.922,3.182,4.251,4.251,0,0,0,.638,1.887h-3A.506.506,0,0,0,0,9.214v1.071a.506.506,0,0,0,.469.536H14.531A.506.506,0,0,0,15,10.286V9.214A.506.506,0,0,0,14.531,8.679Zm-5.28,3.214a1.5,1.5,0,0,1,.593,1.22,1.377,1.377,0,0,1-1.276,1.458H6.611A1.455,1.455,0,0,1,5.3,13.648a.443.443,0,0,0-.629-.239l-1.258.719a.573.573,0,0,0-.21.719l.016.033A3.733,3.733,0,0,0,6.577,17.25H8.569a3.438,3.438,0,0,0,2.681-1.359,4.53,4.53,0,0,0,.922-3.182,4.3,4.3,0,0,0-.156-.816Z" transform="translate(0 -2.25)"/>
+           </svg>
+}
+
+export const CloseIcon = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 10 10">
+              <path id="Icon_awesome-window-close" data-name="Icon awesome-window-close" d="M9.063,2.25H.938A1.011,1.011,0,0,0,0,3.321v7.857A1.011,1.011,0,0,0,.938,12.25H9.063A1.011,1.011,0,0,0,10,11.179V3.321A1.011,1.011,0,0,0,9.063,2.25ZM7.43,8.734a.3.3,0,0,1,0,.388l-.791.9a.22.22,0,0,1-.34,0L5,8.529l-1.3,1.5a.22.22,0,0,1-.34,0l-.791-.9a.3.3,0,0,1,0-.388L3.881,7.25,2.57,5.766a.3.3,0,0,1,0-.388l.791-.9a.22.22,0,0,1,.34,0L5,5.971l1.3-1.5a.22.22,0,0,1,.34,0l.791.9a.3.3,0,0,1,0,.388L6.119,7.25Z" transform="translate(0 -2.25)" fill="red"/>
+            </svg>
+}
+
+
 
 export const getIcon = (type) => {
     switch (type) {
@@ -98,7 +121,7 @@ export const getIcon = (type) => {
         case "task":
             return TaskIcon()
         case "controlBold":
-        return ControlIconBold()
+        return BoldIcon()
         default:
             return <i></i>
     }

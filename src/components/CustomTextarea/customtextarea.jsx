@@ -1,73 +1,137 @@
 import './customtextarea.css'
 import React from 'react'
-import {ControlIconBold} from '../../asset/asset'
+import {BoldIcon} from '../../asset/asset'
 import {JustifyLeft} from '../../asset/asset'
 import {JustifyCenter} from '../../asset/asset'
 import {JustifyRight} from '../../asset/asset'
 import {OrderedList} from '../../asset/asset'
 import {UnOrderedList} from '../../asset/asset'
-import {ImageInsert} from '../../asset/asset'
+import {ItalicIcon} from '../../asset/asset'
+import {UnderLineIcon} from '../../asset/asset'
+import {StrikeThroughIcon} from '../../asset/asset'
 
-const Customtextarea = ({name}) => {
-  
+
+const Customtextarea = () => {
+   
+    const textAreaContent = React.createRef()
+
     const handleCommandExecBold = () =>{
-        document.execCommand('bold', false, null)        
+        document.execCommand('bold', false, null)
+        restoreSelectedText()
+    }
+    const handleCommandExecItalic = () =>{
+        document.execCommand('italic', false, null)
+        restoreSelectedText()
+    }
+    const handleCommandExecUnderLine = () =>{
+        document.execCommand('underLine', false, null)
+        restoreSelectedText()
+    }
+    const handleCommandExecStrikeThrough = () =>{
+        document.execCommand('strikeThrough', false, null)
+        restoreSelectedText()
     }
     const handleCommandExecJustifyLeft = () =>{
-        document.execCommand('justifyLeft', false, null)        
+        document.execCommand('justifyLeft', false, null)
+        restoreSelectedText()
     }
 
     const handleCommandExecJustifyCenter = () =>{
-        document.execCommand('justifyCenter', false, null)        
+        document.execCommand('justifyCenter', false, null)
+        restoreSelectedText()
     }
 
     const handleCommandExecJustifyRight = () =>{
-        document.execCommand('justifyRight', false, null)        
+        document.execCommand('justifyRight', false, null)
+        restoreSelectedText()
     }
 
     const handleCommandExecinsertOrderedList = () =>{
-        document.execCommand('insertOrderedList', false, null)        
+        document.execCommand('insertOrderedList', false, null)
+        restoreSelectedText()
     }
 
     const handleCommandExecinsertUnorderedList = () =>{
-        document.execCommand('insertUnorderedList', false, null)        
+        document.execCommand('insertUnorderedList', false, null)
+        restoreSelectedText()
     }
-    // const handleCommandExecinsertInsertImage = () =>{
-    //     const imageURL = 'https://s3.amazonaws.com/media-p.slid.es/uploads/436198/images/6652648/codercat.jpg'
-    //     document.execCommand('insertImage', false, imageURL)        
-    // }
 
+    const handleCommandExecinsertForeColor = (event) =>{
+        const colorHex = event.target.value
+        document.execCommand('foreColor', false, `${colorHex}`) 
+        restoreSelectedText()
+        const range = saveSelection()
+        setTimeout(()=>{restoreSelection(range)}, 500)
+    }
+
+    
+    const saveSelection = () => {
+        if (window.getSelection) {
+            let sel = window.getSelection();
+            if (sel.getRangeAt && sel.rangeCount) {
+                return sel.getRangeAt(0);
+            }
+        } else if (document.selection && document.selection.createRange) {
+            return document.selection.createRange();
+        }
+        return null;
+    }
+
+    const restoreSelection = (range) => {
+        if (range) {
+            if (window.getSelection) {
+                let sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+            } else if (!document.selection && !range.select) {
+                range.select();
+            }
+        }
+    }
+
+    const restoreSelectedText = () => {
+        const range = saveSelection()
+        setTimeout(()=>{restoreSelection(range)}, 100)
+    }
     
     return (
         <div className="textarea-wrapper">
-            <p className="name">{name}</p>
             <div className="control">
                 <div className="iconwrapper">
-                    <div className="icon" onMouseDown={handleCommandExecBold} data-command="bold">
-                        <ControlIconBold ></ControlIconBold>
+                    <div className="icon" onMouseDown={handleCommandExecBold}>
+                        <BoldIcon ></BoldIcon>
                     </div>
-                    <div className="icon" onMouseDown={handleCommandExecJustifyLeft} data-command="bold">
+                    <div className="icon" onMouseDown={handleCommandExecItalic}>
+                        <ItalicIcon></ItalicIcon>
+                    </div>
+                    <div className="icon" onMouseDown={handleCommandExecUnderLine}>
+                        <UnderLineIcon></UnderLineIcon>
+                    </div>
+                    <div className="icon" onMouseDown={handleCommandExecStrikeThrough}>
+                        <StrikeThroughIcon></StrikeThroughIcon>
+                    </div>
+                    <div className="icon" onMouseDown={handleCommandExecJustifyLeft}>
                         <JustifyLeft></JustifyLeft>
                     </div>
-                    <div className="icon" onMouseDown={handleCommandExecJustifyCenter} data-command="bold">
+                    <div className="icon" onMouseDown={handleCommandExecJustifyCenter}>
                         <JustifyCenter></JustifyCenter>
                     </div>
-                    <div className="icon" onMouseDown={handleCommandExecJustifyRight} data-command="bold">
+                    <div className="icon" onMouseDown={handleCommandExecJustifyRight}>
                         <JustifyRight></JustifyRight>
                     </div>
-                    <div className="icon" onMouseDown={handleCommandExecinsertOrderedList} data-command="bold">
+                    <div className="icon" onMouseDown={handleCommandExecinsertOrderedList}>
                         <OrderedList></OrderedList>
                     </div>
-                    <div className="icon" onMouseDown={handleCommandExecinsertUnorderedList} data-command="bold">
+                    <div className="icon" onMouseDown={handleCommandExecinsertUnorderedList}>
                         <UnOrderedList></UnOrderedList>
                     </div>
-                    {/* <div className="icon" onMouseDown={handleCommandExecinsertInsertImage} data-command="bold">
-                        <ImageInsert></ImageInsert>
-                    </div> */}
+                    <div className="icon">
+                        <input type="color" onChange={handleCommandExecinsertForeColor}/>
+                    </div>
                 </div>
             </div>
-            <div className="textarea" contentEditable="true">
-
+        
+            <div className="textarea" contentEditable="true" ref={textAreaContent}>
             </div>
         </div>
     )

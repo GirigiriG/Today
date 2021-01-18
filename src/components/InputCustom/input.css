@@ -21,10 +21,12 @@
 
 .custom-input .results {
     z-index: 999;
-    top: 1.985rem;
+    top: 3.45rem;
     border-top: none;
     position: absolute;
     background-color: #ffffff;
+    border-top-left-radius: none;
+    border-top-right-radius: none;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -33,7 +35,7 @@
 .custom-input .read-only {
     font-weight: 500;
     color: rgba(0, 0, 0, 0.753);
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     height: 29px;
     border-radius: 3px;
@@ -45,8 +47,6 @@
     position: absolute;
     bottom: 0rem;
     padding-left: 1%;
-    /* right: 0.15rem; */
-    /* left: 0.25rem; */
 }
 .custom-input .read-only i {
     width: 18px;
@@ -60,10 +60,28 @@
 .custom-input .read-only .close {
     margin-left: auto;
     margin-right: 5px;
+    margin-bottom: 0;
+    height: 100%;
     font-size: 15px;
     font-weight: bolder;
     cursor: pointer;
-    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(209, 0, 0);
+}
+
+ 
+.custom-input p:first-child {
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.custom-input .asterisk {
+    font-weight: bolder;
+    color: red;
+    display: inline-block;
+    margin-right: 0.2rem;
 }
 
