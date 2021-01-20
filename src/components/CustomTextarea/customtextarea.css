@@ -3,22 +3,28 @@
     position: relative;
 }
 
-
 .textarea-wrapper .textarea {
     width: 95%;
-    height: 150px;
+    min-height: 175px;
     max-height: 250px;
     padding: 0 2.5%;
     padding-top: 1rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     overflow-y: scroll;
     border: 1px solid #cccccc;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.textarea-wrapper .textarea:focus {
+    outline: none;
+    border: 1px solid rgb(0, 162, 255);
 }
 
 .textarea-wrapper .textarea:hover {
     border: 1px solid rgb(0, 162, 255);
 }
-
 
 .textarea ol, .textarea ul {
     padding-left: 2.5rem;
@@ -29,15 +35,17 @@
 }
 
 .textarea-wrapper .control {
-    width: 98%;
-    padding: 1% 0.75%;
+    width: 99%;
+    padding: 1% 0.5%;
     height: 25px;
     margin: 12px auto;
+    margin-bottom: 0;
     position: relative;
     display: flex;
     align-items: center;
     background-color: #ffffff;
     border: 1px solid #cccccc;
+    border-bottom: none;
     top: 3.5rem;
 }
 

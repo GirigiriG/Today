@@ -17,8 +17,7 @@ const TaskForm = ({id, TaskName, OwnerName, Status}) => {
 
                     <Input 
                     placeholdertext={"Task Name"}
-                    name="Estimate Hours"
-                    type="task">
+                    name="Estimate Hours">
                     </Input>
                 </div>
                 <div className="col-right">
@@ -27,6 +26,12 @@ const TaskForm = ({id, TaskName, OwnerName, Status}) => {
                     name="Owner"
                     type="app_user">
                     </Input>
+
+                    <Input 
+                    placeholdertext={"Task Name"}
+                    name="Remaining Hours">
+                    </Input>
+
                     <p className="status-label">Status</p>
                     <select>
                         <option value="">{Status}</option>
