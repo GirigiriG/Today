@@ -1,54 +1,65 @@
 import "./input.css"
-import React, {useState } from "react";
+import React, { useEffect, useState } from "react";
 import  SearchItem from "../../components/SearchItem/SearchItem";
 import {TaskIcon, UserIcon, CloseIcon} from "../../asset/asset"
 
-const Input = ({type, name, required}) => {
+const Input = ({type, label, value, required}) => {
     const [tasks, setTasks] = useState([])
     const [isReadOnly, setReadOnly] = useState(false)
-    const [recordName, setRecordName] = useState("")
+    const [valueState, setValueState] = useState("")
     
+    console.log(valueState)
+
     const handleOnChange = async (event) => {
-        let recordName = event.target.value.replace(" ", encodeURIComponent('+'));
-        
-        if(recordName.length >= 3 && recordName != null) {
-            const url = `http://localhost:3001/get/record/?name=${recordName}&type=${type}`
+        setValueState(event.target.value)
+        let name = event.target.value.replace(" ", encodeURIComponent('+'))
+        if (name.length >= 3 && name != null) {
+            let url = `http://localhost:3001/get/record/?name=${name}&type=${type}`
             let content = await fetch(url).catch(err => err)
             
-            if(content.status === 200) {
-                const results = await content.json()
+            if (content.status === 200) {
+                let results = await content.json()
                 setTasks(results)
             }
             return
         }
         setTasks([])
     }
+    
+    useEffect(() => {
+        setValueState(value)
+        if(value.length > 0) {
+            setReadOnly(true)  
+        }
+    }, [])
 
     const handleBlur = () => {
         setTasks([])
     }
 
-
 const readOnlyCard = () => {
-    if(isReadOnly) {
-       return (
-        <div className="read-only">
-            <i>{getIcon(type)}</i>
-            <p>{recordName}</p>
-            <p className="close" onClick={() => setReadOnly(false)}>
-                <CloseIcon></CloseIcon>
-            </p>
-        </div>
+    let valueLenght = valueState.length > 0
+    if(isReadOnly && valueLenght) {
+        return (
+            <div className="read-only">
+                <i>{getIcon(type)}</i>
+                <p>{value}</p>
+                <p className="close" onClick={() => {
+                    setReadOnly(!isReadOnly)}
+                }>
+                    <CloseIcon></CloseIcon>
+                </p>
+            </div>
        )
     }
     return <div></div>
 }
 
-const label = () => {
+const showLabel = () => {
     if(required){
-        return <p><span className="asterisk">*</span>{name}</p>
+        return <p><span className="asterisk">*</span>{label}</p>
     }
-    return <p>{name}</p>
+    return <p>{label}</p>
 }
 
 const showResults = () => {
@@ -60,7 +71,7 @@ const showResults = () => {
                 key={task.ID} 
                 task={task}
                 type={type}
-                handleSetRecordName={setRecordName}
+                handleSetRecordName={setValueState}
                 editModeDispatch={setReadOnly}>
                 </SearchItem>)
             }
@@ -80,11 +91,11 @@ const getIcon = (type) => {
     }
 }
 
-
 return(
     <div className="custom-input">
-        {label()}
+        {showLabel()}
         <input
+        value={valueState}
         onChange={handleOnChange}
         onBlur={handleBlur}/>
         {readOnlyCard()}    
@@ -92,8 +103,5 @@ return(
     </div>
     )
 }
-
-
-
 
 export default Input

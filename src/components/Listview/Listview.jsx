@@ -1,13 +1,14 @@
-import  React, {useEffect} from "react";
+import  React, {useEffect, useState} from "react";
 import "./Listview.css"
 import SearchBar from "../SearchBar/SearchBar"
 import ListviewItem from "../ListviewItem/ListviewItem"
 import DetailPanel from "../DetailPanel/DetailPanel"
+import Card from '../../components/Card/Card'
 
 const Listview = () => {
-    const  [detail, setdetail] = React.useState({
+    const  [detail, setdetail] = useState({
         detailIsvisible : false,
-        id: "",
+        record: {},
         cssProperties: {},
         "toggleDisplay": {'display':'block'}
     });
@@ -28,10 +29,12 @@ const Listview = () => {
     },[])
 
     const detailPanel = () => {
+        
         if(detail.detailIsvisible) 
             return (
             <DetailPanel
-                id={detail.id}
+                id={detail.record.ID}
+                record={detail.record}
                 dispatchCSSState={setdetail} 
                 cssprop={detail.cssProperties}>
             </DetailPanel>
@@ -40,50 +43,46 @@ const Listview = () => {
     }
 
     return(
-        
-        <div className="listview">
-            <header>
-                <h3>My Current Tasks</h3>
-            </header>
-            <div className="search-newtask">
-                <div className="search-wrapper">
-                    <SearchBar
-                        handleChange={e => setSearch(e.target.value)}
-                        searchValue={searchState}
-                        placeholderText="Search task...">
-                    </SearchBar>
-                </div>
-                <button>+</button>
-            </div>
-            <div className="list-header" style={detail.cssProperties}>
-                <div>Name</div>
-                <div style={detail.toggleDisplay}>Estimate</div>
-                <div style={detail.toggleDisplay}>Remaining</div>
-                <div style={detail.toggleDisplay}>Owner</div>
-                <div>Status</div>
-            </div>
-
-            <div className="master-detail">
-                <div className="master" style={detail.cssProperties}>
-                    <div className="listview-item-content">
-                    {tasks.map((task, key) => {    
-                        return <ListviewItem
-                            key={key}
-                            title={task.TaskName}
-                            estimate={task.Estimate}
-                            remaining={task.Remaining}
-                            ownerName={task.OwnerName}
-                            id={task.ID}
-                            status={task.Status} 
-                            dispatchToggleState={setdetail}
-                            detail={detail}>
-                        </ListviewItem>
-                    })}    
+        <Card>
+            <div className="listview">
+                <header>
+                    <h3>My Current Tasks</h3>
+                </header>
+                <div className="search-newtask">
+                    <div className="search-wrapper">
+                        <SearchBar
+                            handleChange={e => setSearch(e.target.value)}
+                            searchValue={searchState}
+                            placeholderText="Search task...">
+                        </SearchBar>
                     </div>
+                    <button>+</button>
                 </div>
-                {detailPanel(detail)}
+                <div className="list-header" style={detail.cssProperties}>
+                    <div>Name</div>
+                    <div style={detail.toggleDisplay}>Estimate</div>
+                    <div style={detail.toggleDisplay}>Remaining</div>
+                    <div style={detail.toggleDisplay}>Owner</div>
+                    <div>Status</div>
+                </div>
+
+                <div className="master-detail">
+                    <div className="master" style={detail.cssProperties}>
+                        <div className="listview-item-content">
+                        {tasks.map((task, key) => {    
+                            return <ListviewItem
+                                key={key}
+                                record={task}
+                                dispatchToggleState={setdetail}
+                                detail={detail}>
+                            </ListviewItem>
+                        })}    
+                        </div>
+                    </div>
+                    {detailPanel(detail)}
+                </div>
             </div>
-        </div>
+        </Card>
     )
 }
 

@@ -1,5 +1,7 @@
 .textarea-wrapper {
     width: 100%;
+    margin-top: auto;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -9,7 +11,7 @@
     max-height: 250px;
     padding: 0 2.5%;
     padding-top: 1rem;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     overflow-y: scroll;
     border: 1px solid #cccccc;
     word-wrap: break-word;

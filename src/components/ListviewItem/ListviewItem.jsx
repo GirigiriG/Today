@@ -1,12 +1,11 @@
 import React from "react";
 import "./ListviewItem.css"
 
-const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, ownerName, status, id}) => {
-   
+const ListviewItem = ({dispatchToggleState, detail, record}) => {
     const handleToggleDispatch = () => { 
         let updatedState = {
             detailIsvisible: true,
-            id: id,
+            record: record,
             "toggleDisplay": {"display":"none"},
             cssProperties: {"--detail-width": "50%", "--master-width": "50%"}
         }
@@ -15,11 +14,11 @@ const ListviewItem = ({dispatchToggleState, detail, title, estimate, remaining, 
 
     return (
         <div className="listviewitem" onClick={handleToggleDispatch} >
-            <div>{title}</div>
-            <div style={detail.toggleDisplay}>{estimate}hrs</div>
-            <div style={detail.toggleDisplay}>{remaining}hrs</div>
-            <div style={detail.toggleDisplay}>{ownerName}</div>
-            <div> {status}</div>
+            <div>{record.TaskName}</div>
+            <div style={detail.toggleDisplay}>{record.Estimate}hrs</div>
+            <div style={detail.toggleDisplay}>{record.Remaining}hrs</div>
+            <div style={detail.toggleDisplay}>{record.OwnerName}</div>
+            <div> {record.Status}</div>
         </div>
     )
 }

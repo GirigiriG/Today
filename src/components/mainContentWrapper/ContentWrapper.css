@@ -1,6 +1,6 @@
 .content-wrapper {
-    margin: 15px auto;
-    margin-bottom: 0;
     display: flex;
+    margin-bottom: 0;
+    margin: 15px auto;
     justify-content: space-between;
 }

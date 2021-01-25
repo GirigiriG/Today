@@ -1,8 +1,7 @@
 .listview {
-    height: 92vh;
-    overflow-y: hidden;
+    height: 91.5vh;
+    overflow-y: scroll;
     background-color: #fff;
-    border: 1px solid #dddddd;
     color: rgba(0, 0, 0, 0.700);
 }
 
@@ -49,7 +48,7 @@
     width: var(--master-width);
     overflow-y: scroll;
     height: 76vh;
-    transition: width 0.2s ease-in;
+    transition: width 0.1s ease-in-out;
 }
 
 .search-newtask button:hover {
@@ -73,7 +72,6 @@
     background-color: rgb(252, 252, 252);
     text-align: left;
     flex-direction: row;
-    border-right: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;    
     justify-content: space-between;
 }
