@@ -65,17 +65,17 @@ const showLabel = () => {
 const showResults = () => {
     if (tasks.length) {
         return (
-        <div className="results">
-            {tasks.map(task => 
-                <SearchItem 
-                key={task.ID} 
-                task={task}
-                type={type}
-                handleSetRecordName={setValueState}
-                editModeDispatch={setReadOnly}>
-                </SearchItem>)
-            }
-        </div>
+            <div className="results">
+                {tasks.map(task => 
+                    <SearchItem 
+                    key={task.ID} 
+                    task={task}
+                    type={type}
+                    handleSetRecordName={setValueState}
+                    editModeDispatch={setReadOnly}>
+                    </SearchItem>)
+                }
+            </div>
         )
     }
 }

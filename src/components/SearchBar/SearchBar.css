@@ -4,15 +4,15 @@
     outline: none;
     padding: 0.6rem;
     text-indent: 3px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-radius: 3px;
-    border: 1px solid #009CFD;
-    background-color: rgba(151, 151, 151, 0.081);
+    border: 1px solid #ddd;
     transition: all 0.2s ease-out;
 }
 
 .searchbar:focus {
     width: 100%;
+    border: 2px solid #009CFD;
     background-color:#ffffff;
     transition: all 0.2s ease-in;
 }

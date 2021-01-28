@@ -2,7 +2,7 @@
     padding: .2rem 1rem;
     height: 28px;
     display: flex;
-    font-size: 0.9rem;
+    font-size: 0.80rem;
     justify-content: space-between;
     text-transform: capitalize;
     align-items: center;
@@ -21,7 +21,7 @@
 } 
 
 .listviewitem div {
-    color: rgba(0, 0, 0, 0.804);
+    color: rgba(0, 0, 0, 0.704);
 }
 
 .listviewitem div:not(:first-child) {

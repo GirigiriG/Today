@@ -107,7 +107,7 @@ export const StrikeThroughIcon = () => {
 }
 
 export const CloseIcon = () => {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 10 10">
+    return <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
               <path id="Icon_awesome-window-close" data-name="Icon awesome-window-close" d="M9.063,2.25H.938A1.011,1.011,0,0,0,0,3.321v7.857A1.011,1.011,0,0,0,.938,12.25H9.063A1.011,1.011,0,0,0,10,11.179V3.321A1.011,1.011,0,0,0,9.063,2.25ZM7.43,8.734a.3.3,0,0,1,0,.388l-.791.9a.22.22,0,0,1-.34,0L5,8.529l-1.3,1.5a.22.22,0,0,1-.34,0l-.791-.9a.3.3,0,0,1,0-.388L3.881,7.25,2.57,5.766a.3.3,0,0,1,0-.388l.791-.9a.22.22,0,0,1,.34,0L5,5.971l1.3-1.5a.22.22,0,0,1,.34,0l.791.9a.3.3,0,0,1,0,.388L6.119,7.25Z" transform="translate(0 -2.25)" fill="red"/>
             </svg>
 }

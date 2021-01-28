@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import "./TaskForm.css"
 import Input from '../../components/InputCustom/input'
 import Textarea from '../../components/CustomTextarea/customtextarea'
 
 const TaskForm = ({record, id}) => {
-    let [recordState, setRecord] = useState({})
-
     useEffect(() => {
         
     }, [])
@@ -18,34 +16,34 @@ const TaskForm = ({record, id}) => {
                     placeholdertext={"Task Name"}
                     label="Task Name"
                     record={record}
-                    value={record.TaskName}
+                    value={record.name}
                     required={true}
                     type="task">
                     </Input>
 
                     <Input 
                     placeholdertext={"Task Name"}
-                    value={record.Estimate}
+                    value={record.estimate}
                     name="Estimate Hours">
                     </Input>
                 </div>
                 <div className="col-right">
                     <Input 
                     placeholdertext={"John Doe"}
-                    value={record.OwnerName}
+                    value={record.ownerName}
                     label="Owner"
                     type="app_user">
                     </Input>
 
                     <Input 
                     placeholdertext={"Remaining hours"}
-                    value={record.Remaining}
+                    value={record.remaining}
                     label="Remaining Hours">
                     </Input>
 
                     <p className="status-label">Status</p>
                     <select>
-                        <option value="">{record.Status}</option>
+                        <option value="">{record.status}</option>
                         <option value="">Hold</option>
                         <option value="">Closed</option>
                     </select>

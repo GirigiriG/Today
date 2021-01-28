@@ -11,6 +11,7 @@ const mainHeader = () => {
                     <h3>TODAY</h3>
                 </div>
             </div>
+            <div className="trail"></div>
         </div>
     )
 }

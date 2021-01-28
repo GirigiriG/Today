@@ -24,7 +24,7 @@ const handleOnMouseDown = () => {
 }
 
     return (
-        <div className="item" onMouseDown={handleOnMouseDown} key={task.ID}>
+        <div className="item" onMouseDown={handleOnMouseDown} key={task.id}>
             {getIcon(type)}
             <p ref={recordName}>{task.Name}</p>
         </div>

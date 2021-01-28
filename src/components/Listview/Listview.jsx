@@ -33,7 +33,7 @@ const Listview = () => {
         if(detail.detailIsvisible) 
             return (
             <DetailPanel
-                id={detail.record.ID}
+                id={detail.record.id}
                 record={detail.record}
                 dispatchCSSState={setdetail} 
                 cssprop={detail.cssProperties}>

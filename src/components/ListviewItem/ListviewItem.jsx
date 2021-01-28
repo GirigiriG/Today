@@ -14,11 +14,11 @@ const ListviewItem = ({dispatchToggleState, detail, record}) => {
 
     return (
         <div className="listviewitem" onClick={handleToggleDispatch} >
-            <div>{record.TaskName}</div>
-            <div style={detail.toggleDisplay}>{record.Estimate}hrs</div>
-            <div style={detail.toggleDisplay}>{record.Remaining}hrs</div>
-            <div style={detail.toggleDisplay}>{record.OwnerName}</div>
-            <div> {record.Status}</div>
+            <div>{record.name}</div>
+            <div style={detail.toggleDisplay}>{record.estimate}hrs</div>
+            <div style={detail.toggleDisplay}>{record.remaining}hrs</div>
+            <div style={detail.toggleDisplay}>{record.ownerName}</div>
+            <div> {record.status}</div>
         </div>
     )
 }
